@@ -1,0 +1,16 @@
+# Ignore all image data and numpy arrays
+*.npy
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.bmp
+
+# Ignore folders with raw/test data
+dataset/
+data/
+No_specular_ringing/
+
+# Optional: Ignore checkpoints or large models
+*.pth
+model/
