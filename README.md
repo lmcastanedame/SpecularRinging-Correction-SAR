@@ -35,34 +35,34 @@ This project aims to:
 
 ```bash
 .
-├── MERLIN/                    
-├── Papers/                   
-├── SAE_SuperResolution/                  
+├── MERLIN/                               # Code for MERLIN network for denoising
+├── Papers/                               # Papers included in the research
+├── SAR_SuperResolution/                  # Superresolution setup
 │   ├── data/
-│      ├── SR
-│      ├── Test/
-│         ├── LR
-│         ├── HR
-│      ├── Train/
-│         ├── LR
-│         ├── HR
-│   ├── metrics/
-│   ├── model/
-│   └── nafnet/
-│      ├── arch_util.py
+│      ├── SR                             # Folder for SR results
+│      ├── Test/                          
+│         ├── LR                          # Low-resolution input images
+│         ├── HR                          # High-resolution target images
+│      ├── Train/                         
+│         ├── LR                          # Low-resolution cropped images (no specular ringing) for training
+│         ├── HR                          # High-resolution cropped images (no specular ringing) for training
+│   ├── metrics/                          # Folder including metrics
+│   ├── model/                            # Folder to save model checkpoints and final weights 
+│   └── nafnet/                           # NAFNet architecture
+│      ├── arch_util.py 
 │      ├── local_arch.py
 │      └── NAFNet_arch.py
-│   ├── metrics.ipynb
-│   ├── mvalab_v2.py
-│   ├── test_nafnet.py
-│   └── train_nafnet.py
-├── Subband images analysis/                
+│   ├── metrics.ipynb                     # Jupyter notebook to obtain metrics
+│   ├── mvalab_v2.py                      # Code for SAR images visualization 
+│   ├── test_nafnet.py                    # Code for testing NAFNet
+│   └── train_nafnet.py                   # Code for training NAFNet
+├── Subband images analysis/              # Filter and subband combination setup
 │   ├── dataset/
-│      ├── test/
-│   ├── No_specular_ringing/
-│   ├── filter_subband_combination.ipynb
-│   ├── filter_subband_combination.py
-│   └── mvalab_v2.py
+│      ├── test/                          # Dataset
+│   ├── No_specular_ringing/              # Folder for results without specular ringing
+│   ├── filter_subband_combination.ipynb  # Jupyter notebook for tests and checks
+│   ├── filter_subband_combination.py     # Python code to obtain clean images
+│   └── mvalab_v2.py                      # Code for SAR images visualization 
 ├── README.md
 └── report.pdf
 ```
